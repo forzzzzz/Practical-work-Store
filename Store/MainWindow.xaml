@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Store" Height="300" Width="500">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Sell" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="20,5,20,5" Background="Beige" Width="200" Height="100"/>
+        <Button Content="Manage" FontSize="28" Grid.Column="1" HorizontalAlignment="Center" Padding="20,5,20,5" VerticalAlignment="Center" Background="CadetBlue" Click="Button_Click" Width="200" Height="100"/>
     </Grid>
 </Window>
