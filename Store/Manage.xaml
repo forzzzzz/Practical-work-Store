@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Manage" Height="1080" Width="1920">
     <Grid>
-        <TabControl Background="Aquamarine">
+        <TabControl Background="Aquamarine" FontSize="20">
             <TabItem Header="Categories" Background="AliceBlue">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
@@ -16,7 +16,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     
-                    <ListView x:Name="CategoryItemList" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Row="0" Background="Beige">
+                    <ListView x:Name="CategoryItemList" FontSize="20"  d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Row="0" Background="Beige">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Id" Width="150" DisplayMemberBinding="{Binding Id}"/>
@@ -30,8 +30,8 @@
                     <Button Content="Delete" Grid.Row="2" Width="140" Height="50" HorizontalAlignment="Right" Margin="0,0,30,0" FontSize="20" Background="OrangeRed" Click="Button_Click_2"/>
 
                     <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="Auto" Margin="30,0,0,0">
-                        <Label Content="Name" HorizontalAlignment="Left"  VerticalAlignment="Center" FontSize="14"/>
-                        <TextBox x:Name="NameTextBox" Text="{Binding SelectedItem.Name, ElementName=CategoryItemList, Mode=OneWay}" HorizontalAlignment="Left" Width="150" Height="35" VerticalAlignment="Center" Margin="60,0,0,0"/>
+                        <Label Content="Name" HorizontalAlignment="Left"  VerticalAlignment="Center" FontSize="20"/>
+                        <TextBox x:Name="NameTextBox" Text="{Binding SelectedItem.Name, ElementName=CategoryItemList, Mode=OneWay}" HorizontalAlignment="Left" Width="150" Height="35" VerticalAlignment="Center" Margin="70,0,0,0"/>
                     </Grid>
 
                 </Grid>

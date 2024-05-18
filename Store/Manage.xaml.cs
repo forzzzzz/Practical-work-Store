@@ -1,23 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Store
 {
-    /// <summary>
-    /// Interaction logic for Manage.xaml
-    /// </summary>
     public partial class Manage : Window
     {
         private DataContext context { get; set; }
@@ -31,13 +16,13 @@ namespace Store
 
         public void UpdateData()
         {
-            //List<Product> DatabaseProducts = context.Products.Include(product => product.Category).ToList();
-            //ProductsItemList.ItemsSource = DatabaseProducts;
+            List<Product> DatabaseProducts = context.Products.Include(product => product.Category).ToList();
+            ProductsItemList.ItemsSource = DatabaseProducts;
 
-            //List<Category> DatabaseCategories = context.Categories.ToList();
-            //CategoryItemList.ItemsSource = DatabaseCategories;
+            List<Category> DatabaseCategories = context.Categories.ToList();
+            CategoryItemList.ItemsSource = DatabaseCategories;
 
-            //CategoryComboBox.ItemsSource = DatabaseCategories;
+            CategoryComboBox.ItemsSource = DatabaseCategories;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
